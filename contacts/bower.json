@@ -1,8 +1,8 @@
 {
-  "name": "gyak3",
+  "name": "Contacts",
   "version": "0.0.0",
   "authors": [
-    "horvathgyozo <gyozke@inf.elte.hu>"
+    "Bojtos Csaba bojtoscsabi07@gmail.com"
   ],
   "license": "MIT",
   "ignore": [
@@ -10,11 +10,19 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "public/lib/"
   ],
   "dependencies": {
     "bootstrap": "~3.3.5",
-    "bootswatch": "~3.3.5+3",
+    "bootswatch": "~3.3.5",
     "bootstrap-validator": "~0.9.0"
-  }
+  },
+  "homepage": "https://github.com/bojtoscsabi/alkfejl",
+  "description": "ELTE Alkalmzások fejlesztése beadandó",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "private": true
 }
