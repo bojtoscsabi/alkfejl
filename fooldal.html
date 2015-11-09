@@ -8,7 +8,7 @@
     <title>Hibabejelentő</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/lib/bootswatch/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/bootswatch/cosmo/bootstrap.min.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -47,21 +47,20 @@
                         </li>
                       </ul> -->
                       <ul class="nav navbar-nav navbar-right">
-                          {{#if loggedIn}}
-                          <li><a href="/logout">Kilépés</a></li>
-                          {{else}}
-                          <li><a href="/login">Bejelentkezés</a></li>
-                          {{/if}}
-                          <li><a href="#">About</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">About</a></li>
                       </ul>
-                      {{#if loggedIn}}
-                      <p class="navbar-text navbar-right">Üdv, {{user.forename}}!</p>
-                      {{/if}}
                     </div><!-- /.navbar-collapse -->
                   </div><!-- /.container-fluid -->
                 </nav>
 
-                {{{body}}}
+                <div class="page-header">
+                    <h1>Hibabejelentés az IK-n</h1>
+                </div>
+
+                <p>
+                    Blabla blabla blabla
+                </p>
 
             </div>
         </div>
