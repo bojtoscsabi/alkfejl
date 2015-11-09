@@ -1,2 +1,2 @@
-# Alkalmazások fejlesztése 1. beadandó
+## Alkalmazások fejlesztése 1. beadandó
 
