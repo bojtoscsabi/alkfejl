@@ -12,6 +12,8 @@ var userCollection = require('./models/user');
 var indexController = require('./controllers/index');
 var errorController = require('./controllers/error');
 var loginController = require('./controllers/login');
+var aboutController = require('./controllers/about');
+
 
 var hbs = require('hbs');
 
@@ -137,9 +139,9 @@ app.use(setLocalsForLayout());
 
 //endpoints
 app.use('/', indexController);
-// app.use('/errors', errorController);
 app.use('/errors', ensureAuthenticated, errorController);
 app.use('/login', loginController);
+app.use('/about', aboutController);
 
 app.get('/operator', ensureAuthenticated, andRestrictTo('operator'), function(req, res) {
     res.end('operator');

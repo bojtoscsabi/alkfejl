@@ -69,8 +69,15 @@ router.post('/new', function (req, res) {
         })
         .then(function (error) {
             //siker
-            req.flash('info', 'Hiba sikeresen felvéve!');
-            res.redirect('/errors/list');
+            res.format({
+                'text/html': function(){
+                    req.flash('info', 'Hiba sikeresen felvéve!');
+                    res.redirect('/errors/list');
+                },
+                'application/json': function () {
+                    res.json(error);
+                }
+            });
         })
         .catch(function (err) {
             //hiba
@@ -79,5 +86,20 @@ router.post('/new', function (req, res) {
       
     }
 });
+router.get('/delete/:id', function(req, res) {
+    var id = req.params.id;
+    req.app.models.error.destroy({id: id})
+        .then(function (deletedErrors) {
+            res.format({
+                'text/html': function(){
+                    res.redirect('/errors/list');
+                },
+                'application/json': function () {
+                    res.json({ success: true });
+                }
+            });
+        });
+});
+
 
 module.exports = router;

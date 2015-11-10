@@ -29,31 +29,49 @@
         "id": 3
       },
       {
-        "status": "assigned",
-        "location": "pc6",
-        "description": "rossz",
-        "date": "2015-10-12T13:27:03.715Z",
-        "createdAt": "2015-10-12T13:27:03.715Z",
-        "updatedAt": "2015-10-12T13:27:03.715Z",
-        "id": 4
+        "status": "new",
+        "location": "aaaaaaaaaaaa",
+        "description": "xycy",
+        "date": "2015-11-10T19:53:24.142Z",
+        "createdAt": "2015-11-10T19:53:24.143Z",
+        "updatedAt": "2015-11-10T19:53:24.144Z",
+        "id": 8
       },
       {
-        "status": "ready",
-        "location": "pc6",
-        "description": "rossz",
-        "date": "2015-10-12T13:29:27.426Z",
-        "createdAt": "2015-10-12T13:29:27.426Z",
-        "updatedAt": "2015-10-12T13:29:27.426Z",
-        "id": 5
+        "status": "new",
+        "location": "asda",
+        "description": "asda",
+        "date": "2015-11-10T20:26:13.714Z",
+        "createdAt": "2015-11-10T20:26:13.716Z",
+        "updatedAt": "2015-11-10T20:26:13.716Z",
+        "id": 9
       },
       {
-        "status": "ready",
-        "location": "wqw",
-        "description": "wq",
-        "date": "2015-10-19T13:01:31.521Z",
-        "createdAt": "2015-10-19T13:01:31.522Z",
-        "updatedAt": "2015-10-19T13:01:31.523Z",
-        "id": 6
+        "status": "new",
+        "location": "ddddd",
+        "description": "sadasd",
+        "date": "2015-11-10T20:26:27.835Z",
+        "createdAt": "2015-11-10T20:26:27.836Z",
+        "updatedAt": "2015-11-10T20:26:27.836Z",
+        "id": 11
+      },
+      {
+        "status": "new",
+        "location": "wadawd",
+        "description": "dawdawd",
+        "date": "2015-11-10T20:26:34.082Z",
+        "createdAt": "2015-11-10T20:26:34.083Z",
+        "updatedAt": "2015-11-10T20:26:34.083Z",
+        "id": 12
+      },
+      {
+        "status": "new",
+        "location": "sfdsf",
+        "description": "sdfs",
+        "date": "2015-11-10T20:27:47.140Z",
+        "createdAt": "2015-11-10T20:27:47.141Z",
+        "updatedAt": "2015-11-10T20:27:47.141Z",
+        "id": 13
       }
     ],
     "user": [
@@ -89,6 +107,17 @@
         "createdAt": "2015-10-19T13:16:09.973Z",
         "updatedAt": "2015-10-19T13:16:09.973Z",
         "id": 4
+      },
+      {
+        "surname": "Csaba",
+        "forename": "Bojtos",
+        "neptun": "FWCSZH",
+        "password": "$2a$10$b7LXoYLLYc3JFaqNAMsVgelrukLCzlE7zkZokK8c.sG3zXHny5sOK",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-10T19:22:54.245Z",
+        "updatedAt": "2015-11-10T19:22:54.246Z",
+        "id": 5
       }
     ]
   },
@@ -173,10 +202,10 @@
   },
   "counters": {
     "error": {
-      "id": 6
+      "id": 13
     },
     "user": {
-      "id": 4
+      "id": 5
     }
   }
 }
