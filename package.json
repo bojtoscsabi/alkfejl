@@ -4,22 +4,6 @@
   "description": "ELTE Alkalmazások fejlesztése beadandó",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bojtoscsabi/alkfejl.git"
-  },
-  "author": "Bojtos Csaba",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bojtoscsabi/alkfejl/issues"
-  },
-  "homepage": "https://github.com/bojtoscsabi/alkfejl#readme"
-}
-
-{
-  "scripts": {
     "test": "node_modules/mocha/bin/mocha **/*.test.js",
     "watch-test": "node_modules/mocha/bin/mocha --watch **/*.test.js",
     "start": "node server.js"
@@ -42,5 +26,15 @@
     "chai": "^3.4.1",
     "mocha": "^2.3.3",
     "zombie": "^4.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bojtoscsabi/alkfejl.git"
+  },
+  "author": "Bojtos Csaba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bojtoscsabi/alkfejl/issues"
+  },
+  "homepage": "https://github.com/bojtoscsabi/alkfejl#readme"
 }
