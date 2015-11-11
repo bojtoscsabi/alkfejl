@@ -5,18 +5,18 @@ var router = express.Router();
 
 router.get('/', function (req, res) {
     res.render('login/index', {
-        errorMessages: req.flash('error')
+        errorMessages: req.flash('contact')
     });
 });
 router.post('/', passport.authenticate('local', {
-    successRedirect: '/errors/list',
+    successRedirect: '/contacts/list',
     failureRedirect: '/login',
     failureFlash: true,
     badRequestMessage: 'Hiányzó adatok'
 }));
 router.get('/signup', function (req, res) {
     res.render('login/signup', {
-        errorMessages: req.flash('error')
+        errorMessages: req.flash('contact')
     });
 });
 router.post('/signup', passport.authenticate('local-signup', {

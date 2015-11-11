@@ -17,8 +17,8 @@ var statusClasses = {
     'rejected': 'default',
     'pending': 'warning',
 };
-function decorateErrors(errorContainer) {
-    return errorContainer.map(function (e) {
+function decoratecontacts(contactContainer) {
+    return contactContainer.map(function (e) {
         e.statusText = statusTexts[e.status];
         e.statusClass = statusClasses[e.status];
         return e;
@@ -26,11 +26,11 @@ function decorateErrors(errorContainer) {
 }
 
 router.get('/list', function (req, res) {
-    req.app.models.error.find().then(function (errors) {
-        console.log(errors);
+    req.app.models.contact.find().then(function (contacts) {
+        console.log(contacts);
         //megjelenítés
-        res.render('errors/list', {
-            errors: decorateErrors(errors),
+        res.render('contacts/list', {
+            contacts: decoratecontacts(contacts),
             messages: req.flash('info'),
         });
     });
@@ -40,7 +40,7 @@ router.get('/new', function (req, res) {
     var validationErrors = (req.flash('validationErrors') || [{}]).pop();
     var data = (req.flash('data') || [{}]).pop();
     
-    res.render('errors/new', {
+    res.render('contacts/new', {
         validationErrors: validationErrors,
         data: data,
     });
@@ -58,24 +58,24 @@ router.post('/new', function (req, res) {
         // űrlap megjelenítése a hibákkal és a felküldött adatokkal
         req.flash('validationErrors', validationErrors);
         req.flash('data', req.body);
-        res.redirect('/errors/new');
+        res.redirect('/contacts/new');
     }
     else {
         // adatok elmentése (ld. később) és a hibalista megjelenítése
-        req.app.models.error.create({
+        req.app.models.contact.create({
             status: 'new',
             location: req.body.helyszin,
             description: req.body.leiras
         })
-        .then(function (error) {
+        .then(function (contact) {
             //siker
             res.format({
                 'text/html': function(){
-                    req.flash('info', 'Hiba sikeresen felvéve!');
-                    res.redirect('/errors/list');
+                    req.flash('info', 'Névjegy sikeresen felvéve!');
+                    res.redirect('/contacts/list');
                 },
                 'application/json': function () {
-                    res.json(error);
+                    res.json(contact);
                 }
             });
         })
@@ -88,11 +88,11 @@ router.post('/new', function (req, res) {
 });
 router.get('/delete/:id', function(req, res) {
     var id = req.params.id;
-    req.app.models.error.destroy({id: id})
-        .then(function (deletedErrors) {
+    req.app.models.contact.destroy({id: id})
+        .then(function (deletedcontacts) {
             res.format({
                 'text/html': function(){
-                    res.redirect('/errors/list');
+                    res.redirect('/contacts/list');
                 },
                 'application/json': function () {
                     res.json({ success: true });

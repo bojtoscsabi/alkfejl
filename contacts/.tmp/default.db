@@ -65,11 +65,12 @@
         "id": 15
       }
     ],
+    "contact": [],
     "user": [
       {
         "surname": "q",
         "forename": "q",
-        "neptun": "q",
+        "username": "q",
         "password": "q",
         "avatar": "",
         "role": "riporter",
@@ -80,7 +81,7 @@
       {
         "surname": "Horváth",
         "forename": "Győző",
-        "neptun": "k81dnc",
+        "username": "k81dnc",
         "password": "$2a$10$KIpMlrBNk9sGrgluiEbHKeA/U5qU14cri.tWWGydKMU8w1FLFcDpq",
         "avatar": "",
         "role": "riporter",
@@ -91,7 +92,7 @@
       {
         "surname": "First",
         "forename": "Last",
-        "neptun": "MMMMMH",
+        "username": "MMMMMH",
         "password": "$2a$10$2OlcQ5Lw.VtQGN/S44miw.bqtacm8iTQ33nS7c9CNT2RNqN85TZny",
         "avatar": "",
         "role": "riporter",
@@ -102,13 +103,23 @@
       {
         "surname": "Csaba",
         "forename": "Bojtos",
-        "neptun": "FWCSZH",
+        "username": "FWCSZH",
         "password": "$2a$10$b7LXoYLLYc3JFaqNAMsVgelrukLCzlE7zkZokK8c.sG3zXHny5sOK",
         "avatar": "",
         "role": "riporter",
         "createdAt": "2015-11-10T19:22:54.245Z",
         "updatedAt": "2015-11-10T19:22:54.246Z",
         "id": 5
+      },
+      {
+        "surname": "Bojtos",
+        "forename": "Csaba",
+        "username": "user",
+        "password": "$2a$10$euM2Je/mecRYhTKw2QboAuo0wUzHJ57VIreoN8puwW/c6GB39F5Ue",
+        "role": "riporter",
+        "createdAt": "2015-11-11T20:02:18.015Z",
+        "updatedAt": "2015-11-11T20:02:18.015Z",
+        "id": 6
       }
     ]
   },
@@ -152,8 +163,47 @@
         "type": "datetime"
       }
     },
+    "contact": {
+      "date": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "new",
+          "assigned",
+          "success",
+          "rejected",
+          "pending"
+        ]
+      },
+      "location": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
     "user": {
-      "neptun": {
+      "username": {
         "type": "string",
         "unique": true
       },
@@ -164,9 +214,6 @@
         "type": "string"
       },
       "forename": {
-        "type": "string"
-      },
-      "avatar": {
         "type": "string"
       },
       "role": {
@@ -196,7 +243,10 @@
       "id": 15
     },
     "user": {
-      "id": 5
+      "id": 6
+    },
+    "contact": {
+      "id": 1
     }
   }
 }

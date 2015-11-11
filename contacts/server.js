@@ -6,11 +6,11 @@ var flash = require('connect-flash');
 
 var Waterline = require('waterline');
 var waterlineConfig = require('./config/waterline');
-var errorCollection = require('./models/error');
+var contactCollection = require('./models/contact');
 var userCollection = require('./models/user');
 
 var indexController = require('./controllers/index');
-var errorController = require('./controllers/error');
+var contactController = require('./controllers/contact');
 var loginController = require('./controllers/login');
 var aboutController = require('./controllers/about');
 
@@ -52,15 +52,15 @@ passport.deserializeUser(function(obj, done) {
 
 // Local Strategy for sign-up
 passport.use('local-signup', new LocalStrategy({
-        usernameField: 'neptun',
+        usernameField: 'username',
         passwordField: 'password',
         passReqToCallback: true,
     },   
-    function(req, neptun, password, done) {
-        req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
+    function(req, username, password, done) {
+        req.app.models.user.findOne({ username: username }, function(err, user) {
             if (err) { return done(err); }
             if (user) {
-                return done(null, false, { message: 'Létező neptun.' });
+                return done(null, false, { message: 'Létező felhasználónév.' });
             }
             req.app.models.user.create(req.body)
             .then(function (user) {
@@ -75,12 +75,12 @@ passport.use('local-signup', new LocalStrategy({
 
 // Stratégia
 passport.use('local', new LocalStrategy({
-        usernameField: 'neptun',
+        usernameField: 'username',
         passwordField: 'password',
         passReqToCallback: true,
     },
-    function(req, neptun, password, done) {
-        req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
+    function(req, username, password, done) {
+        req.app.models.user.findOne({ username: username }, function(err, user) {
             if (err) { return done(err); }
             if (!user || !user.validPassword(password)) {
                 return done(null, false, { message: 'Helytelen adatok.' });
@@ -139,7 +139,7 @@ app.use(setLocalsForLayout());
 
 //endpoints
 app.use('/', indexController);
-app.use('/errors', ensureAuthenticated, errorController);
+app.use('/contacts', ensureAuthenticated, contactController);
 app.use('/login', loginController);
 app.use('/about', aboutController);
 
@@ -153,7 +153,7 @@ app.get('/logout', function(req, res){
 
 // ORM példány
 var orm = new Waterline();
-orm.loadCollection(Waterline.Collection.extend(errorCollection));
+orm.loadCollection(Waterline.Collection.extend(contactCollection));
 orm.loadCollection(Waterline.Collection.extend(userCollection));
 
 // ORM indítása

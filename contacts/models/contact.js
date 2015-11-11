@@ -1,5 +1,5 @@
 module.exports = {
-    identity: 'error',
+    identity: 'contact',
     connection: 'default',
     attributes: {
         date: {

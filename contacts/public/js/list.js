@@ -1,8 +1,8 @@
 $(function () {
     console.log('list.js');
     
-    var $errorTable = $('#errorTable').hide();
-    console.log($errorTable);
+    var $contactTable = $('#contactTable').hide();
+    console.log($contactTable);
     
     var statusClasses = {
         'new': 'danger',
@@ -16,7 +16,7 @@ $(function () {
     
     var rows = {};
     types.forEach(function (type) {
-        var $trs = $errorTable.find('tbody tr .label-'+statusClasses[type]).closest('tr');
+        var $trs = $contactTable.find('tbody tr .label-'+statusClasses[type]).closest('tr');
         rows[type] = $trs;
     });
     console.log(rows);
@@ -60,6 +60,6 @@ $(function () {
     $div.append($ul);
     $div.append($tabContent);
     
-    $errorTable.before($div);
+    $contactTable.before($div);
     
 });
