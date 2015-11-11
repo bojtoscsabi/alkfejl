@@ -65,7 +65,28 @@
         "id": 15
       }
     ],
-    "contact": [],
+    "contact": [
+      {
+        "name": "asda",
+        "phonenumber": "asda",
+        "email": "asd",
+        "address": "asd",
+        "category": "Összes",
+        "createdAt": "2015-11-11T22:20:35.342Z",
+        "updatedAt": "2015-11-11T22:20:35.342Z",
+        "id": 18
+      },
+      {
+        "name": "ads",
+        "phonenumber": "asd",
+        "email": "asds",
+        "address": "assda",
+        "category": "Összes",
+        "createdAt": "2015-11-11T22:20:44.927Z",
+        "updatedAt": "2015-11-11T22:20:44.927Z",
+        "id": 19
+      }
+    ],
     "user": [
       {
         "surname": "q",
@@ -164,24 +185,26 @@
       }
     },
     "contact": {
-      "date": {
-        "type": "datetime"
+      "name": {
+        "type": "string"
       },
-      "status": {
+      "phonenumber": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "category": {
         "type": "string",
         "enum": [
-          "new",
-          "assigned",
-          "success",
-          "rejected",
-          "pending"
+          "Összes",
+          "Család",
+          "Barátok",
+          "Kollégák"
         ]
-      },
-      "location": {
-        "type": "string"
-      },
-      "description": {
-        "type": "string"
       },
       "user": {
         "type": "integer",
@@ -216,14 +239,6 @@
       "forename": {
         "type": "string"
       },
-      "role": {
-        "type": "string",
-        "enum": [
-          "riporter",
-          "operator"
-        ],
-        "defaultsTo": "riporter"
-      },
       "id": {
         "type": "integer",
         "autoIncrement": true,
@@ -246,7 +261,7 @@
       "id": 6
     },
     "contact": {
-      "id": 1
+      "id": 19
     }
   }
 }

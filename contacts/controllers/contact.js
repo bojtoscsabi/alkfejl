@@ -4,18 +4,16 @@ var router = express.Router();
 
 //Viewmodel réteg
 var statusTexts = {
-    'new': 'Új',
-    'assigned': 'Hozzárendelve',
-    'ready': 'Kész',
-    'rejected': 'Elutasítva',
-    'pending': 'Felfüggesztve',
+        'Összes': 'Összes',
+        'Család': 'Család',
+        'Barátok': 'Barátok',
+        'Kollégák': 'Kollégák',
 };
 var statusClasses = {
-    'new': 'danger',
-    'assigned': 'info',
-    'ready': 'success',
-    'rejected': 'default',
-    'pending': 'warning',
+        'Összes': 'default',
+        'Család': 'default',
+        'Barátok': 'default',
+        'Kollégák': 'default',
 };
 function decoratecontacts(contactContainer) {
     return contactContainer.map(function (e) {
@@ -47,9 +45,12 @@ router.get('/new', function (req, res) {
 });
 router.post('/new', function (req, res) {
     // adatok ellenőrzése
-    req.checkBody('helyszin', 'Hibás helyszín').notEmpty().withMessage('Kötelező megadni!');
-    req.sanitizeBody('leiras').escape();
-    req.checkBody('leiras', 'Hibás leírás').notEmpty().withMessage('Kötelező megadni!');
+    req.checkBody('name', 'Hibás név').notEmpty().withMessage('Kötelező megadni!');
+    req.checkBody('phonenumber', 'Hibás telefonszám').notEmpty().withMessage('Kötelező megadni!');
+    req.checkBody('email', 'Hibás e-mail cím').notEmpty().withMessage('Kötelező megadni!');
+    req.checkBody('address', 'Hibás cím').notEmpty().withMessage('Kötelező megadni!');
+  // req.sanitizeBody('leiras').escape();
+    
     
     var validationErrors = req.validationErrors(true);
     console.log(validationErrors);
@@ -63,9 +64,11 @@ router.post('/new', function (req, res) {
     else {
         // adatok elmentése (ld. később) és a hibalista megjelenítése
         req.app.models.contact.create({
-            status: 'new',
-            location: req.body.helyszin,
-            description: req.body.leiras
+            name: req.body.name,
+            phonenumber: req.body.phonenumber,
+            email: req.body.email,
+            address: req.body.address,
+            category: 'Összes' 
         })
         .then(function (contact) {
             //siker

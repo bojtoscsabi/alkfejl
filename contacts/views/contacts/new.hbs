@@ -1,52 +1,94 @@
-{
-    {#
-        extend "scripts"
-    }
-}
-<script src="/lib/bootstrap-validator/dist/validator.min.js"></script> {
-    {
-        /extend}}
+{{#extend "scripts"}}
+<script src="/lib/bootstrap-validator/dist/validator.min.js"></script>
+{{/extend}}
 
-        < div class = "page-header" >
-            <h1>Új névjegy felvétele</h1> < /div>
+<div class="page-header">
+    <h1>Új névjegy felvétele</h1>
+</div>
 
-        < form class = "form-horizontal"
-        method = "post"
-        data - toggle = "validator" >
-            <fieldset>
+<form class="form-horizontal" method="post" data-toggle="validator">
+    <fieldset>
         <div class="form-group
-            {{#if validationErrors.helyszin}}
+            {{#if validationErrors.name}}
                 has-error
             {{/if}}
         ">
-            <label for="helyszin" class="col-lg-2 control-label">Helyszín</label>
+            <label for="name" class="col-lg-2 control-label">Név</label>
             <div class="col-lg-10">
-                <input required class="form-control" id="helyszin" name="helyszin" placeholder="pl. PC6, Lovarda, 2. emeleti folyosó..." type="text" value="{{data.helyszin}}">
-                {{#if validationErrors.helyszin}}
-                    <span class="help-block">{{validationErrors.helyszin.msg}}</span>
+                <input required class="form-control" id="name" name="name" placeholder="pl. Gipsz Jakab" type="text" value="{{data.name}}">
+                {{#if validationErrors.name}}
+                    <span class="help-block">{{validationErrors.name.msg}}</span>
                 {{/if}}
-                <div class="help-block with-contacts"></div>
+                <div class="help-block with-errors"></div>
             </div>
         </div>
         <div class="form-group
-            {{#if validationErrors.leiras}}
+            {{#if validationErrors.phonenumber}}
                 has-error
             {{/if}}
         ">
-            <label for="leiras" class="col-lg-2 control-label">Leírás</label>
+            <label for="phonenumber" class="col-lg-2 control-label">Telefonszám</label>
             <div class="col-lg-10">
-                <textarea required class="form-control" rows="3" id="leiras" name="leiras">{{data.leiras}}</textarea>
-                <span class="help-block">Meg kell adni a helyszínt, ha pedig konkrét géppel van probléma, akkor azt is.</span>
-                {{#if validationErrors.leiras}}
-                    <span class="help-block">{{validationErrors.leiras.msg}}</span>
+                <input required class="form-control" id="phonenumber" name="phonenumber" placeholder="pl. +36301234567" type="text" value="{{data.phonenumber}}">
+                {{#if validationErrors.phonenumber}}
+                    <span class="help-block">{{validationErrors.phonenumber.msg}}</span>
                 {{/if}}
-                <div class="help-block with-contacts"></div>
+                <div class="help-block with-errors"></div>
             </div>
         </div>
+        <div class="form-group
+            {{#if validationErrors.email}}
+                has-error
+            {{/if}}
+        ">
+            <label for="email" class="col-lg-2 control-label">E-mail cím</label>
+            <div class="col-lg-10">
+                <input required class="form-control" id="email" name="email" placeholder="pl. gipszjakab@elte.hu" type="text" value="{{data.email}}">
+                {{#if validationErrors.email}}
+                    <span class="help-block">{{validationErrors.email.msg}}</span>
+                {{/if}}
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.address}}
+                has-error
+            {{/if}}
+        ">
+            <label for="address" class="col-lg-2 control-label">Cím</label>
+            <div class="col-lg-10">
+                <input required class="form-control" id="address" name="address" placeholder="pl. 1117 Budapest, Pázmány Péter sétány 1/C" type="text" value="{{data.address}}">
+                {{#if validationErrors.address}}
+                    <span class="help-block">{{validationErrors.address.msg}}</span>
+                {{/if}}
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.category}}
+                has-error
+            {{/if}}
+        ">
+            <label for="sel1" class="col-lg-2 control-label">Kategória</label>
+            <div class="col-lg-10">
+            <select class="col-lg-10" id="sel1">
+                <option value="Összes">Összes</option>
+                <option value="Család">Család</option>
+                <option value="Barátok">Barátok</option>
+                <option value="Kollégák">Kollégák</option>
+                {{#if validationErrors.category}}
+                    <span class="help-block">{{validationErrors.category.msg}}</span>
+                {{/if}}
+                <div class="help-block with-errors"></div>
+            </select>
+            </div>
+        </div>
+        
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
                 <button type="reset" class="btn btn-default">Cancel</button>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
-    </fieldset> < /form>
+    </fieldset>
+</form>        

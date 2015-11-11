@@ -5,11 +5,10 @@ $(function () {
     console.log($contactTable);
     
     var statusClasses = {
-        'new': 'danger',
-        'assigned': 'info',
-        'ready': 'success',
-        'rejected': 'default',
-        'pending': 'warning',
+        'Összes': 'default',
+        'Család': 'default',
+        'Barátok': 'default',
+        'Kollégák': 'default',
     };
 
     var types = Object.keys(statusClasses);
@@ -35,11 +34,10 @@ $(function () {
                 '<table class="table table-striped table-hover">' +
                     '<thead>' +
                         '<tr>' +
-                            '<th>Időpont</th>' +
-                            '<th>Státusz</th>' +
-                            '<th>Helyszín</th>' +
-                            '<th>Leírás</th>' +
-                            '<th></th>' +
+                            '<th>Név</th>' +
+                            '<th>Telefonszám</th>' +
+                            '<th>E-mail cím</th>' +
+                            '<th>Cím</th>' +
                         '</tr>'    +
                     '</thead>' +
                     '<tbody>' +

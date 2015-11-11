@@ -21,12 +21,6 @@ module.exports = {
             type: 'string',
             required: true,
         },
-        role: {
-            type: 'string',
-            enum: ['riporter', 'operator'],
-            required: true,
-            defaultsTo: 'riporter'
-        },
         
         contacts: {
             collection: 'contact',

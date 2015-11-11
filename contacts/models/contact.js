@@ -2,22 +2,25 @@ module.exports = {
     identity: 'contact',
     connection: 'default',
     attributes: {
-        date: {
-            type: 'datetime',
-            defaultsTo: function () { return new Date(); },
-            required: true,
-        },
-        status: {
-            type: 'string',
-            enum: ['new', 'assigned', 'success', 'rejected', 'pending'],
-            required: true,
-        },
-        location: {
+        name: {
             type: 'string',
             required: true,
         },
-        description: {
+        phonenumber: {
             type: 'string',
+            required: true,
+        },
+        email: {
+            type: 'string',
+            required: true,
+        },
+        address: {
+            type: 'string',
+            required: true,
+        },
+        category: {
+            type: 'string',
+            enum: ['Összes', 'Család', 'Barátok', 'Kollégák'],
             required: true,
         },
         
