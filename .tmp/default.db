@@ -67,34 +67,24 @@
     ],
     "contact": [
       {
-        "name": "asdasd",
-        "phonenumber": "asdasd",
-        "email": "asdads",
-        "address": "asdad",
+        "name": "Gipsz Jakab",
+        "phonenumber": "+36301234567",
+        "email": "gipszjakab@elte.hu",
+        "address": "1211 Budapest, Kossuth Lajos utca 12",
         "category": "Összes",
-        "createdAt": "2015-11-11T23:35:34.297Z",
-        "updatedAt": "2015-11-11T23:35:34.297Z",
-        "id": 20
+        "createdAt": "2015-11-12T21:02:44.815Z",
+        "updatedAt": "2015-11-12T21:02:44.815Z",
+        "id": 27
       },
       {
-        "name": "dsa",
-        "phonenumber": "dsa",
-        "email": "dsa",
-        "address": "d",
+        "name": "Gipsz Lajos",
+        "phonenumber": "+36706548236",
+        "email": "gipszlajos@elte.hu",
+        "address": "1211 Budapest, Kossuth Lajos utca 6",
         "category": "Összes",
-        "createdAt": "2015-11-12T15:21:58.345Z",
-        "updatedAt": "2015-11-12T15:21:58.345Z",
-        "id": 25
-      },
-      {
-        "name": "sadasd",
-        "phonenumber": "sadsad",
-        "email": "sadasd",
-        "address": "asda",
-        "category": "Összes",
-        "createdAt": "2015-11-12T16:31:39.031Z",
-        "updatedAt": "2015-11-12T16:31:39.031Z",
-        "id": 26
+        "createdAt": "2015-11-12T21:03:23.461Z",
+        "updatedAt": "2015-11-12T21:03:23.461Z",
+        "id": 28
       }
     ],
     "user": [
@@ -271,7 +261,7 @@
       "id": 6
     },
     "contact": {
-      "id": 26
+      "id": 28
     }
   }
 }
