@@ -58,7 +58,7 @@ describe('UserModel', function () {
     it('should be able to find a user', function() {
         return User.create(getUserData())
         .then(function(user) {
-            return User.findOneByusername(user.username);
+            return User.findOneByUsername(user.username);
         })
         .then(function (user) {
             expect(user.username).to.equal('abcdef');
@@ -77,6 +77,11 @@ describe('UserModel', function () {
         it('should return false with wrong password', function() {
              return User.create(getUserData()).then(function(user) {
                  expect(user.validPassword('titkos')).to.be.false;
+             })
+        });
+         it('should return false with empty password', function() {
+             return User.create(getUserData()).then(function(user) {
+                 expect(user.validPassword('')).to.be.false;
              })
         });
     });
