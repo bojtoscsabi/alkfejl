@@ -1,0 +1,1 @@
+# ELTE Alkalmazások fejlesztése beadandó
