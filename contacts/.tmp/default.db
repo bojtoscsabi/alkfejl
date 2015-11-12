@@ -85,6 +85,26 @@
         "createdAt": "2015-11-11T23:35:34.297Z",
         "updatedAt": "2015-11-11T23:35:34.297Z",
         "id": 20
+      },
+      {
+        "name": "sdfs",
+        "phonenumber": "sdfssdf",
+        "email": "dfsf",
+        "address": "sdf",
+        "category": "Összes",
+        "createdAt": "2015-11-12T11:00:20.127Z",
+        "updatedAt": "2015-11-12T11:00:20.127Z",
+        "id": 21
+      },
+      {
+        "name": "sdfss",
+        "phonenumber": "dfsdf",
+        "email": "sdfds",
+        "address": "fsdf",
+        "category": "Összes",
+        "createdAt": "2015-11-12T11:15:43.024Z",
+        "updatedAt": "2015-11-12T11:15:43.024Z",
+        "id": 22
       }
     ],
     "user": [
@@ -261,7 +281,7 @@
       "id": 6
     },
     "contact": {
-      "id": 20
+      "id": 22
     }
   }
 }
