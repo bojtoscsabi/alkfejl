@@ -49,7 +49,7 @@ Az oldal az alábbi végpont-szerkezet alapján épül fel:
 ![Osztálymodell](documentation/uml.jpg)
 
 ### Implementáció
-Az alkalmazás a node.js keretrendszer felhasználásával a Cloud9 (c9.io) platformon készült, 
+Az alkalmazás a node.js keretrendszer felhasználásával a [Cloud9](https://c9.io) online fejlesztő környezetben készült, 
 és a Heroku platformon lett publikálva: [http://nevjegyek.herokuapp.com](http://nevjegyek.herokuapp.com)
 
 **Felhasznált technológiák:**
