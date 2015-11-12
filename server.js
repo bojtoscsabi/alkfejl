@@ -14,7 +14,6 @@ var contactController = require('./controllers/contact');
 var loginController = require('./controllers/login');
 var aboutController = require('./controllers/about');
 
-
 var hbs = require('hbs');
 
 //-----------------------------------------------------

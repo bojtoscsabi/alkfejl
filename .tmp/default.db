@@ -67,16 +67,6 @@
     ],
     "contact": [
       {
-        "name": "ads",
-        "phonenumber": "asd",
-        "email": "asds",
-        "address": "assda",
-        "category": "Összes",
-        "createdAt": "2015-11-11T22:20:44.927Z",
-        "updatedAt": "2015-11-11T22:20:44.927Z",
-        "id": 19
-      },
-      {
         "name": "asdasd",
         "phonenumber": "asdasd",
         "email": "asdads",
@@ -87,24 +77,14 @@
         "id": 20
       },
       {
-        "name": "sdfs",
-        "phonenumber": "sdfssdf",
-        "email": "dfsf",
-        "address": "sdf",
+        "name": "dsa",
+        "phonenumber": "dsa",
+        "email": "dsa",
+        "address": "d",
         "category": "Összes",
-        "createdAt": "2015-11-12T11:00:20.127Z",
-        "updatedAt": "2015-11-12T11:00:20.127Z",
-        "id": 21
-      },
-      {
-        "name": "sdfss",
-        "phonenumber": "dfsdf",
-        "email": "sdfds",
-        "address": "fsdf",
-        "category": "Összes",
-        "createdAt": "2015-11-12T11:15:43.024Z",
-        "updatedAt": "2015-11-12T11:15:43.024Z",
-        "id": 22
+        "createdAt": "2015-11-12T15:21:58.345Z",
+        "updatedAt": "2015-11-12T15:21:58.345Z",
+        "id": 25
       }
     ],
     "user": [
@@ -281,7 +261,7 @@
       "id": 6
     },
     "contact": {
-      "id": 22
+      "id": 25
     }
   }
 }
